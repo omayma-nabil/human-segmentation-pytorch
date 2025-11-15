@@ -560,20 +560,5 @@ show_image_and_mask(image, mask,  perd_mask_fpn.detach().cpu().squeeze(0),
 show_image_and_mask(image, mask,  perd_mask_deeplab.detach().cpu().squeeze(0),
                     title_image="DeepLabV3+ Prediction", title_mask="DeepLab Mask")
 
-import json
 
-path = "/content/drive/MyDrive/Colab-Notebooks/Image_Segmentation_with_PyTorch.ipynb"
-
-with open(path, "r", encoding="utf-8") as f:
-    nb = json.load(f)
-
-# Supprimer les widgets cassés
-if "metadata" in nb and "widgets" in nb["metadata"]:
-    del nb["metadata"]["widgets"]
-
-# Sauvegarder la version propre
-with open(path, "w", encoding="utf-8") as f:
-    json.dump(nb, f, indent=2)
-
-print("Notebook cleaned successfully!")
 
