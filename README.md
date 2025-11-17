@@ -59,6 +59,8 @@ All models are implemented using `segmentation-models-pytorch`.
 
 ##  5. Training Configuration
 
+This section summarizes the training configuration used for all models in this project. 
+
 | Parameter      | Value               |
 |----------------|-------------------|
 | Epochs         | 25                 |
