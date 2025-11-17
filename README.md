@@ -3,7 +3,7 @@
 A complete deep learning project for **human segmentation** using three state-of-the-art architectures: **UNet**, **FPN**, and **DeepLabV3+**.  
 The models are trained on the **Human Segmentation Dataset** and evaluated using metrics such as **IoU**, **Dice Score**, and **training time**.
 
----
+
 
 ## 1. Project Overview
 
@@ -15,7 +15,7 @@ The goal is to evaluate their performance on a human segmentation dataset and an
 - generalization ability  
 - visual prediction quality  
 
----
+
 
 ##  2. Dataset
 
