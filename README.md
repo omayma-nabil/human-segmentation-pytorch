@@ -26,7 +26,11 @@ The goal is to evaluate their performance on a human segmentation dataset and an
 **Mask values:**
 
 - `1` → human  
-- `0` → background  
+- `0` → background
+-  
+### Dataset
+The Human Segmentation Dataset used in this project is originally provided by Vikram Shenoy.  
+GitHub: [https://github.com/VikramShenoy97/Human-Segmentation-Dataset](https://github.com/VikramShenoy97/Human-Segmentation-Dataset)  
 
 
 
