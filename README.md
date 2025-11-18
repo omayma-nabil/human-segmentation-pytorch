@@ -99,10 +99,44 @@ In contrast, DeepLabV3+ significantly underperformed on this dataset. The very l
 - higher model complexity leading to overfitting,  
 - or suboptimal hyperparameters for this specific task.
 
-  ![Sample Prediction](unet.png)
 
 Overall, **UNet remains the best-performing model**, closely followed by **FPN**, while **DeepLabV3+ is not suitable for small datasets in this configuration**.
 
 
+###  8. Qualitative Evaluation
+
+Below are sample predictions produced by the three segmentation models.  
+These examples help visualize how well each architecture separates the human foreground from the background.
+
+#### **UNet Prediction**
+![UNet Prediction](unet.png)
+
+- Strong and clean boundaries  
+- Good separation of human silhouette  
+- Occasionally misses small fine details (hands, hair tips)
+
+---
+
+####  **FPN Prediction**
+![FPN Prediction](fpn.png)
+
+- Produces smooth masks  
+- Slightly less sharp than UNet  
+- Performs well on medium-scale structures
+
+---
+
+#### **DeepLabV3+ Prediction**
+![DeepLabV3+ Prediction](deeplab.png)
+
+- Struggles with this dataset (very small and simple)  
+- Over-segmenting or under-segmenting areas  
+- Better performance expected with larger datasets
+
+---
+
+#### **Overall Observation**
+
+UNet and FPN provide clean, reliable human segmentation, while DeepLabV3+ is less adapted to this small dataset and requires more data to generalize properly.
 
 
