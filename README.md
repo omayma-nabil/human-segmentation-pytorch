@@ -75,3 +75,32 @@ This section summarizes the training configuration used for all models in this p
 | Image Size     | 320×320            |
 | Loss Function  | Dice Loss + BCE    |
 
+### 6. Model Performance Results
+
+| Model         | Dice Score | IoU Score | Accuracy | Execution Time |
+|---------------|------------|-----------|----------|----------------|
+| **UNet**      | 0.9468     | 0.8991    | 0.9717   | 178.05 sec     |
+| **FPN**       | 0.9465     | 0.8986    | 0.9712   | 142.60 sec     |
+| **DeepLabV3+** | 0.3424    | 0.2068    | 0.6350   | 164.98 sec     |
+
+> ⚠️ **Note**  
+> The execution times were measured on a small dataset and a Google Colab runtime.  
+> They should only be used for comparison **within this project** and do not reflect real-world performance on large-scale datasets.
+
+### 7. Discussion of Results
+
+The results show a clear performance gap between UNet/FPN and DeepLabV3+ for this dataset.  
+UNet achieved the highest overall Dice, IoU, and accuracy, making it the most reliable model for human segmentation in this project. Its strong performance is likely due to its encoder–decoder structure, which is well-suited for small datasets and produces consistent segmentation masks.
+
+FPN performed very similarly to UNet, with almost identical Dice and IoU scores. Its lighter architecture and pyramid feature extraction allowed it to run faster while maintaining competitive accuracy. This makes FPN a good choice when computational efficiency is important.
+
+In contrast, DeepLabV3+ significantly underperformed on this dataset. The very low Dice and IoU scores suggest that the model did not generalize well. This may be due to:  
+- the small dataset size (DeepLabV3+ typically requires large datasets),  
+- higher model complexity leading to overfitting,  
+- or suboptimal hyperparameters for this specific task.
+
+Overall, **UNet remains the best-performing model**, closely followed by **FPN**, while **DeepLabV3+ is not suitable for small datasets in this configuration**.
+
+
+
+
