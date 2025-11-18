@@ -99,7 +99,7 @@ In contrast, DeepLabV3+ significantly underperformed on this dataset. The very l
 - higher model complexity leading to overfitting,  
 - or suboptimal hyperparameters for this specific task.
 
-  ![Sample Prediction](images/fpn.png)
+  ![Sample Prediction](unet.png)
 
 Overall, **UNet remains the best-performing model**, closely followed by **FPN**, while **DeepLabV3+ is not suitable for small datasets in this configuration**.
 
